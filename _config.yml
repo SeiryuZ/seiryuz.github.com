@@ -1,0 +1,7 @@
+source: .
+destination: ./_site
+plugins:     ./_plugins
+
+safe: true
+lsi: false
+pygments: true
