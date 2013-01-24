@@ -22,9 +22,6 @@ task :bootstrap_css do |t|
 
   puts "Compiling #{BOOTSTRAP_CUSTOM_LESS}"
   sh 'lessc --compress bootstrap/less/custom.less > bootstrap/css/bootstrap.min.css'
-  source = 'bootstrap/css/bootstrap.min.css'
-  target = 'css/bootstrap.min.css' 
-  cp source, target if different?(source, target)
 end
 
 
