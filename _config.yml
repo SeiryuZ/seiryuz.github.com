@@ -1,7 +1,28 @@
-source: .
+# Path related configs
 destination: ./_site
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 plugins:     ./_plugins
+source: .
 
-safe: true
+# Local stuff
+server_port: 8080
+
+
+# Web config
+future: false
 lsi: false
+paginate: 5
+permalink: /:categories/:year/:month/:day/:title
 pygments: true
+safe: true
+
+
+# Theme universal variable
+title: Steven's blog
+tagline: -
+author:
+  name: Steven
+  email: stvn.bu@gmail.com
+  github: SeiryuZ
+  twitter: StvnOnly
+  feedburner: -
