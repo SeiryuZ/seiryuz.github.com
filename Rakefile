@@ -29,13 +29,6 @@ task :bootstrap_js do
   require 'uglifier'
   require 'erb'
 
-  template = ERB.new %q{
-  <!-- AUTOMATICALLY GENERATED. DO NOT EDIT. -->
-  <% paths.each do |path| %>
-  <script type="text/javascript" src="/bootstrap/js/<%= path %>"></script>
-  <% end %>
-  }
-
   paths = []
   minifier = Uglifier.new
   Dir.glob(File.join(BOOTSTRAP_SOURCE, 'js', '*.js')).each do |source|
@@ -49,9 +42,7 @@ task :bootstrap_js do
     end
   end
 
-  File.open('_includes/bootstrap.js.html', 'w') do |f|
-    f.write template.result(binding)
-  end
+  sh 'uglifyjs bootstrap/js/* js/main.js -o js/all.js'
 end
 
 

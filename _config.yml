@@ -26,3 +26,16 @@ author:
   github: SeiryuZ
   twitter: StvnOnly
   feedburner:
+
+
+asset_bundler:
+  compress:
+    js: uglifyjs -o :outfile :infile
+    css: uglifyjs -o :outfile :infile
+  base_path: /bundles/
+  server_url:
+  remove_bundled: false
+  dev: false
+  markup_templates:
+    js: "<script type='text/javascript' src='{{url}}'></script>\n"
+    css: "<link rel='stylesheet' type='text/css' href='{{url}}' />\n"
