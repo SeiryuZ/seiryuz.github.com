@@ -29,20 +29,21 @@
 <body>
   <div class="container">
   <!-- <div class="container showgrid"> -->
-    {% include header.html %}
+<!--     {% include header.html %} -->
 
     <div id="main" class="span-{% if page.no_sidebar %}24{% else %}17{% endif %}">
       {{ content }}
     </div>
 
-    {% unless page.no_sidebar %}
+<!--     {% unless page.no_sidebar %}
       {% include sidebar.html %}
-    {% endunless %}
+    {% endunless %} -->
 
-    {% include footer.html %}
+<!--     {% include footer.html %} -->
   </div>
 
+  <script type="text/javascript" src="/js/main.js"></script>
+  {% include google_analytics.html   %}
 </body>
-<script type="text/javascript" src="/js/main.js"></script>
-{% include google_analytics.html   %}
+
 </html>
