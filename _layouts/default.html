@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- taken example of _layouts/default.html from https://github.com/Bilalh/bilalh.github.com/blob/source/_layouts/default.html -->
+  {% if page.title %}
+  <title>{{ page.title }} - {{ site.title }}</title>
+  {% else %}
+  <title>{{ site.title }}</title>
+  {% endif %}
+
+  <meta name="author" content="Steven Only" />
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}" />
+  {% else %}
+  <meta name="description" content="{{site.title }} {{ page.title }}" />
+  {% endif %}
+
+  {% if page.keywords %}
+  <meta name="keywords" content="{{ page.keywords }}" />
+  {% endif %}
+
+  <meta name="robots" content="noodp, nydir" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <link href="/css/main.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body>
+  <div class="container">
+  <!-- <div class="container showgrid"> -->
+    {% include header.html %}
+
+    <div id="main" class="span-{% if page.no_sidebar %}24{% else %}17{% endif %}">
+      {{ content }}
+    </div>
+
+    {% unless page.no_sidebar %}
+      {% include sidebar.html %}
+    {% endunless %}
+
+    {% include footer.html %}
+  </div>
+
+</body>
+<script type="text/javascript" src="/js/main.js"></script>
+{% include google_analytics.html   %}
+</html>

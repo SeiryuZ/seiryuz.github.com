@@ -1,7 +1,7 @@
 # Path related configs
 destination: ./_site
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-plugins:     ./_plugins
+plugins: ./_plugins
 source: .
 
 # Local stuff
@@ -19,10 +19,10 @@ safe: true
 
 # Theme universal variable
 title: Steven's blog
-tagline: -
+tagline:
 author:
   name: Steven
   email: stvn.bu@gmail.com
   github: SeiryuZ
   twitter: StvnOnly
-  feedburner: -
+  feedburner:
