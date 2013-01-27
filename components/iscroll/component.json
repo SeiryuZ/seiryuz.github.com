@@ -1,0 +1,9 @@
+{
+  "name": "iscroll",
+  "version": "0.0.0",
+  "commit": "d31d6e6ff798a8adc572879549ac1a3e2f47a01e",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cubiq/iscroll.git"
+  }
+}
