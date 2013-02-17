@@ -21,7 +21,7 @@ task :bootstrap_css do |t|
   end
 
   puts "Compiling #{BOOTSTRAP_CUSTOM_LESS}"
-  sh 'lessc --compress bootstrap/less/custom.less > bootstrap/css/bootstrap.min.css'
+  sh "lessc --compress #{BOOTSTRAP_CUSTOM_LESS}> bootstrap/css/bootstrap.min.css"
 end
 
 
