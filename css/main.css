@@ -16,6 +16,9 @@
   -moz-border-radius: 50px;
   border-radius: 50px;
   background: url('http://www.gravatar.com/avatar/659e64ba2f0b4abc09935879cd3261f8.png?s=100') no-repeat;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 }
 
 .clear{
