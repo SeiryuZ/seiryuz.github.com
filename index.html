@@ -3,3 +3,21 @@ layout: default
 ---
 
 <p>Hi you have reached my (Steven / @SeiryuZ) blog. This blog is still under constructions. Apologize in advance for things breaking left and right.</p>
+<hr>
+
+<!-- from https://github.com/Bilalh/bilalh.github.com/ -->
+<h2>Latest posts</h2>
+  {% assign posts = site.posts %}
+  {% assign listing_limit = 4 %}
+  {% for post in posts limit: listing_limit %}
+    <div class="post-listing">
+      <div class="inner">
+        <span class="title">
+        <span class="date">{{ post.date | date: "%d %B %Y" }}</span>
+        {% if post.url %}<a href="{{post.url}}">{% endif %}
+          {{ post.title }}
+        {% if post.url %}</a>{% endif %}
+        </span>
+      </div>
+    </div>
+  {% endfor %}
