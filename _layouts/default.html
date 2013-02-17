@@ -28,19 +28,34 @@
 </head>
 
 <body>
+  <!-- HEADER -->
   <div class="container">
-  <!-- <div class="container showgrid"> -->
-<!--     {% include header.html %} -->
-
-    <div id="main" class="span-{% if page.no_sidebar %}24{% else %}17{% endif %}">
-      {{ content }}
+    <div class='row'>
+      <header>
+        <h1> Steven's blog </h1>
+      </header>
     </div>
 
-<!--     {% unless page.no_sidebar %}
-      {% include sidebar.html %}
-    {% endunless %} -->
+    <!-- Navigation list -->
+    <div class='row'>
+      <div class='span2'>
+        <nav role="navigation">
+          <ul class='nav nav-list side-nav'>
+            <li><a href="/">Home</a></li>
+            <li><a href="/portfolio/">Portfolio</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
 
-<!--     {% include footer.html %} -->
+      <!-- Main Content -->
+      <div id="main" class="span10">
+        {{ content }}
+      </div>
+    </div>
+
+
   </div>
   {% include all.js.html %}
 </body>
