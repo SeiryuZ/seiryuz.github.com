@@ -42,7 +42,11 @@ task :bootstrap_js do
     end
   end
 
-  sh 'uglifyjs bootstrap/js/* js/main.js -o js/all.js'
+  js_list = ['bootstrap/js/bootstrap-scrollspy.min.js',
+             'bootstrap/js/bootstrap-button.min.js',
+    ]
+
+  sh "uglifyjs #{js_list.join(sep=' ')} js/main.js -o js/all.js"
 end
 
 
