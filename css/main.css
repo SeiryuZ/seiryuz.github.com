@@ -72,6 +72,7 @@ body{
 .main-content{
   font-size: 18px;
   line-height: 30px;
+  text-align: justify;
 }
 
 .main-content p{
