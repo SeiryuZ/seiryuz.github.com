@@ -1,3 +1,5 @@
+# ASSET TASK
+
 # Where our Bootstrap source is installed. Can be overridden by an environment variable.
 BOOTSTRAP_SOURCE = ENV['BOOTSTRAP_SOURCE'] || File.expand_path("~/projects/bootstrap")
 
@@ -60,4 +62,31 @@ def different?(path1, path2)
   else
     true
   end
+end
+
+
+
+
+# TASK FOR MANAGING BLOG
+
+# modified from https://github.com/Bilalh/bilalh.github.com/blob/source/Rakefile
+# Makes a new post
+task :new do
+  throw "No title given" unless ARGV[1]
+  title = ""
+  ARGV[1..ARGV.length - 1].each { |v| title += " #{v}" }
+  title.strip!
+  now = Time.now
+  path = "_posts/#{now.strftime('%F')}-#{title.downcase.gsub(/[\s\.]/, '-').gsub(/[^\w\d\-]/, '')}.md"
+
+  File.open(path, "w") do |f|
+    f.puts "---"
+    f.puts "layout: post"
+    f.puts "title: #{title}"
+    f.puts "date: #{now.strftime('%F %T')}"
+    f.puts "---"
+    f.puts ""
+    f.puts ""
+  end
+  exit
 end
