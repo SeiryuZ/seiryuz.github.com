@@ -6,13 +6,13 @@ Testing is a crucial part of building a good software which is often overlooked.
 
 Our Django tests in one of our project reached the count of 162 tests (Which are still not completely testing the whole stacks). The time it took us to run the whole tests using PostgreSQL is `118s` which are really annoying when you need to tests for the changes you made. I know that you can run only some of the tests instead of the whole suites for quicker testing time, but I felt that tests should be quick so you can immediately knows what breaks from your changes.
 
-So with speed in mind, I tried to read the Django documentations once again. Here I found two neat tricks that can easily speed up your tests.
+So with speed in mind, I tried to read the Django documentations once again and some blogs for testing tips. Here I found two neat tricks that can easily speed up your tests.
 
 
 ---
 #### 1. Use in memory SQLite for testing ####
 ---
-It is extremely good to have tests run on the exact same database as your production server, be it PostgreSQL, MySQL, or any other databases. It could catch errors that are specific to your choice of database. If speed are your main concern for developments, nothing could beat an in memory SQLite database for testing. It is **extremely fast**.
+From some blogs that I read, It is extremely good to have tests run on the exact same database as your production server, be it PostgreSQL, MySQL, or any other databases. It could catch errors that are specific to your choice of database. If speed are your main concern for developments, nothing could beat an in memory SQLite database for testing. It is **extremely fast**.
 
 Here's how you would like to apply SQLite for your tests
 
@@ -34,7 +34,7 @@ Gotcha:
 ---
 #### 2. Use MD5 Hash only ####
 ---
-Based on the documentations, Django uses a strong encryption that will take some time to compute, in order for a stronger protections to our data. On our tests, we used fixtures extensively and all of our user objects in the fixture has a password encrypted with Django's default encryption `pbkdf2_sha256`.
+Based on the [documentations](https://docs.djangoproject.com/en/dev/topics/testing/overview/#speeding-up-the-tests), Django uses a strong encryption that will take some time to compute, in order for a stronger protections to our data. On our tests, we used fixtures extensively and all of our user objects in the fixture has a password encrypted with Django's default encryption `pbkdf2_sha256`.
 
 Our tests involve of using the fixtures data and loggin in as a user. This process is repeated on every single tests that require user login. In django's documentation, we are recommended to use weaker hash functions, since it will speed up the tests considerably.
 
@@ -57,4 +57,5 @@ Gotcha:
 ### Conclusion ###
 ---
 
-Use in-memory SQLite and MD5 Hash on tests, it will speed up your tests considerably while needing minimal efforts. Now I can work on my changes even faster, since I can check back with the test results faster than before.
+Use in-memory SQLite and MD5 Hash on tests, it will speed up your tests considerably while needing minimal efforts. Now I can work on my changes even faster, since I can check back with the test results faster than before. Our tests' run duration come down from `118s` to `75s` using in-memory SQLite instead of PostgreSQL and even faster to `49s` when combined with weaker hashing.
+
