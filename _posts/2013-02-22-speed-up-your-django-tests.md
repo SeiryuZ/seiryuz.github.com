@@ -6,7 +6,7 @@ Testing is a crucial part of building a good software which is often overlooked.
 
 Our Django tests in one of our project reached the count of 162 tests (Which are still not completely testing the whole stacks). The time it took us to run the whole tests using PostgreSQL is `118s` which are really annoying when you need to tests for the changes you made. I know that you can run only some of the tests instead of the whole suites for quicker testing time, but I felt that tests should be quick so you can immediately knows what breaks from your changes.
 
-So with speed in mind, I tried to read the Django documentations once again and some blogs for testing tips. Here I found two neat tricks that can easily speed up your tests.
+So with speed in mind, I tried to read the Django documentations once again and some blogs for testing tips. Here I found two neat tricks that can easily speed up your tests. * Note that this tricks is tested with Django 1.4.3
 
 
 ---
