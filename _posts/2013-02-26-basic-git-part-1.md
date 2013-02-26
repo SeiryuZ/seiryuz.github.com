@@ -6,7 +6,7 @@ So this will be a short post about git basic. In one sentence, Git is a distribu
 
 Few of the advantage of using git are that you can roll back to previous versions if you screw up on your latest versions, You can easily collaborate with others since git will enable you to manage changes easily when compared to managing changes by hand, and many more. Basically, if you still use dropbox or any other manual approach for your repository(I am looking at you Binus International students), please, by all means learn git! It will amke your life easier.
 
-Please note that this will not be the most comprehensive guide about git, so apologize in advance for being slow or explaining too much. For more advanced user, you can go to more advance blog / website. I recommend [git-scm's website](http://git-scm.com/), [git-ready](http://gitready.com/), and [try.github.com](try.github.com).
+Please note that this will not be the most comprehensive guide about git, so apologize in advance for being slow or explaining too much. For more advanced user, you can go to more advance blog / website. I recommend [git-scm's website](http://git-scm.com/), [git-ready](http://gitready.com/), and [try.github.com](try.github.com). Also, this might not work on windows machine, since I have not used or tried git on windows yet.
 
 
 So you are ready to start learning git. Now what?
