@@ -47,7 +47,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 Now, let say you have not finished modifying the readme_more.md and you just want to keep track readme.md in the next commit. You can use `git add [filename]` to move that particular filename into the staging area.
 
- {% highlight bash linenos %}
+{% highlight bash linenos %}
 xxxxxxxxx:seiryuz.github.com steven$ git add readme.md
 xxxxxxxxx:seiryuz.github.com steven$ git status
 # On branch master
@@ -66,8 +66,8 @@ nothing added to commit but untracked files present (use "git add" to track)
 See the difference now? when you move file(s) to the staging area, it will be listed by `git status` to be under changes to be comitted. The untracked file will not be saved in the next commit. Maybe after you finish the modification on the file later on after the commit you want to make another commit just for readme_more.md.
 
 ### Handy shortcut on adding files ###
-`git add .` will add EVERYTHING that has been changed on your current path and its childrens to the staging area.
-`git add folder_name` will add EVERYTHING that has been changed on that particular folder.
+* `git add .` will add EVERYTHING that has been changed on your current path and its childrens to the staging area.
+* `git add folder_name` will add EVERYTHING that has been changed on that particular folder.
 
 These two commands are very useful, but use with care so that you don't put files that you don't want into the staging area.(I am guilty of this mistake so many times)
 
